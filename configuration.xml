@@ -1,0 +1,1457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Fichier de configuration DAUIServer  -->
+<!--
+	Une scene virtuelle déclenche une action de type bouton. 
+	Elle est ajouté par l'interface DAUISERVER.
+	Pour positionner la scene virtuelle, la couleur de la scene précédente est changé par la couleur du bouton de l'action.
+	Ces couleurs n'existent pas sous Daslight.
+	Pour annuler une scene virtuelle, la couleur de la scene précédente est remplacé par la couleur "ColorStd" définie dans le fichier des paramétres.
+-->
+<DAUIServer>
+
+	<params>
+		<param  name="initPos" value="0" help = "Si 1 init la position et dimenssion de la fenêtre" /> 
+		<param  name="TopMost" value="0" help = "Si 1 La fenêtre est toujours au premier plan" /> 
+		<param  name="MoveDas" value="false"  help = "Donne à la frame Das la même position et même taille que DAUIServer"/>
+		<param  name="windowstate" value="2"  help = "Type de fenêtre windows (0:Norm 1:mini 2:max)"/>
+		<param  name="borderstate" value="1"  help = "Type de bordure fenêtre windows (0 pas de bordure 4 bordure)"/>
+		<param  name="minimumrowheight" value="60"  help = "Valeur minimum hauteur élément liste snaps"/>
+		<param  name="dasfile" value="C:\Users\franc\Documents\Daslight 5\Projects\interview.dvc"  help = "Fichier dash 5"/>
+		<param  name="dasupdate" value="true"  help = "Si true autorise la modification du fichier Das"/>
+		<param  name="OSC_IP" value="127.0.0.1"  help = "Adresse IP OSC (DasLight)"/>
+		<param  name="OSC_Inc_Port" value="7001"  help = "port entrant OSC (DasLight)"/>
+		<param  name="OSC_Out_Port" value="7000"  help = "port sortant OSC (DasLight)"/>
+		<param  name="ui_input_device" value="X-Touch-Ext"  help = "device midi d'entrée"/>
+		<param  name="ui_output_device" value="X-Touch-Ext"  help = "device midi sortie"/>
+		<param  name="URL_UI" value="http://192.168.1.111/mixer.html"  help = "Url pour acceder au site de l'UI"/>
+		<param  name="ColorStd" value="#fff69031"  help = "Couleur de remplacement si suppression scene virtuelle"/>
+		<param  name="OSCFrameToFocus" value="Daslight 5"  help = "Si non vide nom de la fenêtre de l'application OSC pour passe en top automatique"/>
+	</params>
+	
+	<snapshots>
+	
+		<snap id="1" name ="Amazing Grace" type = "0" actif="true"  >
+			<comment><![CDATA[(FA LA)<font color="#FF0000";>Mado prend la place à Marie-Claire</font><ul><li>Lead </li><li>Ohoh</li><li><font color="#FF0000";>Twas grace that taught my heart to fear And grace my fears (#) relieved. ↗️ How precious did that grace appear The hour I first believed.</font></li><li><font color="#00FF00";>Through many dangers toils and snares I have already (#] come. ↗️ This grace that brought me safe thus far. And grace will lead me home.</font></li><li><p><font color="#FFFFFF";>Amazing grace how sweet the sound That saved a wretch (#) like me. ↗️ I once was lost but now I'm found Was blind but now I see.</font></li></ul>]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.7" />
+				<channel id="4" type="UI" color="2" name="i.0" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="2" name ="Kumbaya" type = "0" actif="true"  >
+			<comment><![CDATA[(RE FA LA)<ul><li><font color="#FF0000";>Ohoh</font></li><li>Lead Phlippe (nous => Kumbaya Kumbaya)</li><li><font color="#00FF00";>Some one's praying Lord,kumbaya</font></li><li><font color="#00FFFF";>Some one's singing Lord,kumbaya</font></li><li>Laisser démarrer les basses puis Kumbaya Kumbaya</li><li><font color="#FFFF00";> Fin lead seul</font></li></ul>]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.6" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>	
+		<snap id="3" name ="Wade IN THE Water" type = "0" actif="true"  >
+			<comment><![CDATA[(MI)<ul><li>Lead Mado</li><li><font color="#FF0000";>Début basses & alti  <b>=></b> réponse Ténors Sopra</font></li><li><font color="#00FF00";>The leader looks like the israelite</font></li><li><font color="#00FFFF";>It looks like the band that moses led</font></li><li>oh....</li></ul>]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.0" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>	
+		<snap id="4" name ="Everybody sing freedom" type = "0" actif="true"  >
+			<comment><![CDATA[(SI ... DO ... DO RE)<br><u><font color="#FF0000";>Dans partie lente : <ul><li>FREEDOM mains ouvertes</li><li>MOANING mains sur les épaules</li></ul> dessinent un coeur</font></u><br><ul><li>Lead Florence</li><li><font color="#00FFFF";>Freedom</font></li><li><font color="#00FF00";>Moaning</font></li><li><font color="#FFFF00";>Crying</font></li><li>Shooting</li></ul>]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="5" name ="I'm so glad" type = "0" actif="true"  >
+			<comment><![CDATA[<ul><li><font color="#FF0000";>DO+RE+DO+...RE+MI+RE+</font></li></ul>]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.5" />
+				<channel id="4" type="UI" color="2" name="i.1" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>	
+		<snap id="6" name ="Down to the river to pray" type = "0" actif="true"  >
+			<comment><![CDATA[ <ul><li>(RE RE)</li><li>Sisters - Robe and crow</li><li>Brothers - Star by crown</li><li>Fathers - Robe and crown</li><li>Mothers - star by crown</li><li>Siners - Robe abd crown</li></ul>]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="7" name ="Go tell it on the mountain" type = "0" actif="true"  >
+			<comment><![CDATA[(LA) <ul>
+			<li><b><u>X2</u></b> Go, tell it on the mountain Over the hills and everywhere Go, tell it on the mountain That Jesus Christ is born</li>
+			<li><font color="#FF0000";>While shepherds kept their watching - O'ver silent flocks by night - Behold throughout the heavens - There shone a Holy light</font></li>
+			<li><b><u>X2</u></b> Go, tell it ..</li>
+			<li><font color="#00FF00";>The shepherds feared and trembled - When, lo! Above the Earth - Rang out the angel chorus - That hailed our Savior's birth</font></li>
+			<li><b><u>X2</u></b> Go, tell it ..</li>
+			<li><font color="#FFFF00";>Down in a lowly manger - Our humble Christ was born - And brought us all salvation - That blessed Christmas born</font></li>
+			<li><b><u>Oh .....</u></b></li>
+			<li><b><u>X2</u></b> Go, tell it on the mountain - <u>Go tell it</u> - <u>Go, tell it</u> Go, tell it on the mountain That Jesus Christ is born</font></li>
+			<li>Go, tell it - Go, tell it - Go, tell it - Go, tell it - That Jesus Christ is born</li>
+			</ul>]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>	
+		<snap id="8" name ="I saw the light" type = "0" actif="true"  >
+			<comment><![CDATA[ (LA) <font color="#FF0000";><B>Bougie main gauche.<br>Fin blackout à déclencher legerement en avance</b></font>.
+			<ul>
+			<li><font color="#FF0000";>I wandered so aimless, life filled with sin<br>I wouldn't let my dear savior in<br>Then Jesus came like a stranger in the night</font></li>
+			<li><font color="#00FF00";>Just like a blindman, I wandered along<br>Worries and fears I claimed for my own<br>Then like the blindman God gave back his sight</font></li>
+			<li><font color="#FFFF00";>I was a fool to wander'n as stray<br>straight is the gate and narrow the way<br>Now I have trade the wrong for the right</font></li>
+			</ul>	
+			]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="5" name="i.10" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>	
+		<snap id="9" name ="This little light" type = "0" actif="true"  >
+			<comment><![CDATA[(RE)
+				<font color="#FF0000";>Héléne prend la place à Marie-claire</font><br>
+				Main droite <-> main gauche sur Shine Shine Shine<br>
+				Fin deux mains ouvertes 
+				<br>Attention couplet de fin oh oh  puis This little light...
+				]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.7" />
+				<channel id="4" type="UI" color="2" name="i.3" />
+				<channel id="5" type="UI" color="2" name="i.1" />
+				<channel id="6" type="UI" color="2" name="i.0" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="10" name ="Keep your lamp" type = "0" actif="true"  >
+			<comment><![CDATA[(SOL)<br>
+				<ul>
+					<li><font color="#FF0000";>	1 - 3 - 6 - 8	</font></li>
+					<li>Keep your lamps trimmed and burning</li>
+					<li>Keep your lamps trimmed and burning</li>
+					<li>Keep your lamps trimmed and burning</li>
+					<li>For this old world it's almost done</li>
+					<li><font color="#00FF00";>			2 - 7</font></li>
+					<li>Brother don't you stop prayin</li>
+					<li>Sister keep right prayin</li>
+					<li>Brother don't you stop a cryin</li>
+					<li>For this old world it's almost done</li>
+					<li><font color="#FFFF00";>			4 - 9</font></li>
+					<li>Mother don't you stop prayin</li>
+					<li>Father keep right prayin</li>
+					<li>Mother don't you stop a cryin</li>
+					<li>For this old world it's almost done</li>
+					<li><font color="#00FFFF";>			5</font></li>
+					<li>Oh Oh Oh - Oh Oh Oh  (X2)</li>
+				</ul>
+			]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>		
+		<snap id="11" name ="Oh Lord" type = "0" actif="true"  >
+			<comment><![CDATA[(Si SI puis DO+ DO+)<br> Attention au mixage de la voix de Christelle.]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.4" />
+				<channel id="4" type="UI" color="2" name="i.1" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="12" name ="Prayers for freedom" type = "0" actif="true"  >
+			<comment><![CDATA[(FA) <u> Mixage : Guitare</u><br>Blessed river, polishing stones,<br>She is polishing our hearts, we are claiming our thrones,<br>To sit side by side in our awakened homes.<br>Love is always watching. Love is always watching.<br><br>			Medicine giver, gentle spirit of the land<br>She is polishing our hearts in ways we do not understand<br>We walk side by side and offer both our hands<br><br>			Brothers, sisters, brave pilgrims of the night<br>We have followed our hearts, and to truth we have arrived<br>To sit side by side in divinity's light]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.2" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="5" name="i.10" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="13" name ="Fix me Jesus" type = "0" actif="true"  >
+			<comment><![CDATA[(LA) Lead : Marie-Claire - Christelle - Annie ]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.0" />
+				<channel id="4" type="UI" color="2" name="i.1" />
+				<channel id="5" type="UI" color="2" name="i.2" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>	
+		<snap id="14" name ="Remember me" type = "0" actif="true"  >
+			<comment><![CDATA[(ME)
+			<ul>
+			
+			<li><p >WHEN MY TIME WILL BE OVER - IN THAT KINGDOWN OF FIRE - WOUNDED BY FEAR AND SUFFER - I BEG YOU PLEASE REMEMBER<br></p></li>
+			<li><p >WHEN I COME TO DISCOVER - THE CONTRY OF MY FATHER - SO FAR AWAY FROM DESPAIR - I BEG YOU PLEASE REMEMBER<br></p></li>
+			<li><p >WHEN I WILL CROSS THE RIVER - AND GET RID OF MY SQUALOR - I WILL MEET YOU MY FATHER - AND SEE YOUR BEGIN FOR EVER<br></p></li>
+			
+			</ul>]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.0" />
+				<channel id="4" type="UI" color="2" name="i.5" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>	
+		<snap id="15" name ="A home in the kingdom" type = "0" actif="true"  >
+			<comment><![CDATA[ (DO SOL)
+			<ul>
+			<li>I do have Crown </li>
+			<li>I do have a robe </li>
+			<li>I do have room </li>
+			<li>I have a savior</li>
+			</ul>
+			]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.4" />
+				<channel id="4" type="UI" color="2" name="i.1" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		
+		<snap id="16" name ="Amen" type = "0" actif="true"  >
+			<comment><![CDATA[(SI) Lead : Christelle => ⚠️ + HF ]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.1" />
+				<channel id="4" type="UI" color="2" name="i.9" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>	
+		<snap id="17" name ="We wish you well" type = "0" actif="true"  >
+			<comment><![CDATA[(LA puis RE+ DO+ SI*2 puis RE+ MI+ FA+ FA+ DO+)<br>
+			<ul>
+			<li><p >When you leave this place my lonely friend</p></li>
+			<li><p >When the show will stop for you</p></li>
+			<li><p >Don't forget this world</p></li>
+			<li><p >Remember the sound of the lord</p></li></ul>
+			<br>
+			<ul>
+			<li><p >When the trouble arrive in your life</p></li>
+			<li><p >When the night is falling down</p></li>
+			<li><p >Don't forget this world my friend</p></li>
+			<li><p >that the lord can bless your way</p></li>
+			</ul>
+			]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.0" />
+				<channel id="4" type="UI" color="2" name="i.5" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>	
+		<snap id="18" name ="Total praise" type = "0" actif="true"  >
+			<comment><![CDATA[(MI) Attention. Fin lumière sur dernier Amen puis blackout sur fin Amen.<br> Lord I will lift my eyes to the hills<br>Knowing my help is comin’ from You<br>Your peace You give me in time of the storm<br>You are the source of my strength<br>You are the strength of my life<br>I lift my hands in total praise to You<br>You are the source of my strength<br>You are the strength of my life<br>I lift my hands in total praise<br>I lift my hands in total praise to You]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="19" name ="Down by the riverside" type = "0" actif="false"  >
+			<comment><![CDATA[ I'm gonna lay down burden...<br>Oh where<br>All right<br>Oh where]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>		
+		
+		<snap id="20" name ="Gamblin man" type = "0" actif="false"  >
+			<comment><![CDATA[<u>Solo 3eme</u><br><br>So got gamble to his house<br>Laid him on the bed<br>He said some boddy give me fresh water<br> Pour it allround my head]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />						
+				<channel id="1" type="UI" color="2" name="i.6" />
+				<channel id="2" type="UI" color="2" name="i.5" />
+				<channel id="3" type="UI" color="2" name="i.4" />
+				<channel id="4" type="UI" color="2" name="i.3" />
+				<channel id="5" type="UI" color="2" name="i.8" />
+				<channel id="6" type="UI" color="2" name="i.2" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			<channels page="2" name ="UI 1-7">
+			</channels>
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="21" name ="Let it shine" type = "0" actif="false"  >
+			<comment><![CDATA[<u>Solo 2 fois</u><br><br>Let it Shine on me<br>Let it Shine on me<br>Let your light from the light-house<br>Shine on me<br><br><b>Monter sur From the light house aprés solo Loulou</b>]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.5" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.8" />
+				<channel id="6" type="UI" color="5" name="i.11" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>		
+		<snap id="22" name ="Oh happy day" type = "0" actif="false"  >
+			<comment><![CDATA[ Oh happy<br>Décallé aprés Basse & Alti Happy day 2x<br>Oh happy day<br><br><u>Light :</u> décaller déclenchement final Oh Happy Day]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="23" name ="I love Jesus" type = "0" actif="false"  >
+			<comment><![CDATA[ Jesus -> Yes I do<br>My lord -> Yes I do<br>Jesus -> Why don't you<br><br><u>Mixage</u> Attention voix Momone]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.6" />
+				<channel id="4" type="UI" color="2" name="i.3" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>		
+		<snap id="24" name ="Wayfaring stranger" type = "0" actif="false"  >
+			<comment><![CDATA[ I am a poor wayfaring stranger<br>Traveling through this world alone<br>There is no sickness, toil or danger<br>In that bright land to which I go<br>I'm going there to see my mother<br>I'm going there no more to roam<br>I'm going there over Jordan<br>I'm only going over home now]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.1" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="25" name ="My tribute" type = "0" actif="false"  >
+			<comment><![CDATA[ How can I say thanks<br>For the things You have done for me<br>Things so undeserved<br>Yet You gave to prove Your love for me<br>The voices of a million angels<br>Could not express my gratitude<br>All that I am and ever hope to be<br>I owe it all to Thee<br><br>To God be the glory...<br><br>just let me live my life<br>Let it pleasing, Lord to Thee<br>And if I gain any praise<br>Let it go to Calvary]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="26" name ="Rock My Soul" type = "0" actif="false"  >
+			<comment><![CDATA[<font color="#FF0000";>Mado prend la place de Marie-claire.</font>]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.0" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		
+		<snap id="28" name ="He never said" type = "0" actif="false"  >
+			<comment><![CDATA[ ]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.5" />
+				<channel id="4" type="UI" color="2" name="i.7" />
+				<channel id="5" type="UI" color="5" name="i.9" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>		
+		<snap id="29" name ="Choose life" type = "0" actif="false"  >
+			<comment><![CDATA[ ]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="30" name ="Alleluia" type = "0" actif="false"  >
+			<comment><![CDATA[ ]]></comment>
+		<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="" />
+				<channel id="4" type="UI" color="2" name="" />
+				<channel id="5" type="UI" color="2" name="" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		<snap id="27" name ="Thula sizwe" type = "0" actif="false"  >
+			<comment><![CDATA[<font color="#FF0000";>Héléne prend la place à Christelle. Martine prend la place à Marie-claire.</font><u>Mixage</u> : Djembé]]></comment>
+		
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="UI" color="2" name="i.9" />
+				<channel id="4" type="UI" color="2" name="i.0" />
+				<channel id="5" type="UI" color="5" name="i.1" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+	
+		<snap id="31" name ="Z_presentation" type = "1" actif="true"  >
+			<comment><![CDATA[Ne pas oublier de se positionner sur la préparation pendant une présentation. ]]></comment>
+			<channels page="0" name="Leads" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="4" type="UI" color="2" name="i.8" />
+				<channel id="5" type="UI" color="2" name="i.0" />
+				<channel id="6" type="UI" color="2" name="" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="1" name="DLight" >
+				<channel id="0" type="das" color="4" dasident = "Chorale" name="CHORALE" />
+				<channel id="1" type="das" color="4" dasident = "Façade" name="FACADE" />
+				<channel id="2" type="das" color="4" dasident = "wash pont" name="WASH" />
+				<channel id="3" type="das" color="4" dasident = "Ph Ar" name="Ph Ar" />
+				<channel id="4" type="das" color="4" dasident = "Ph Face" name="Ph Face" />
+				<channel id="5" type="das" color="4" dasident = "" name="" />
+				<channel id="6" type="das" color="4" dasident = "" name="" />
+				<channel id="7" type="das" color="4" dasident = "All" name="D MAST" />
+			</channels>
+			<channels page="2" name="UI 1-7" >
+				<channel id="0" type="UI" color="2" name="i.0" />
+				<channel id="1" type="UI" color="2" name="i.1" />
+				<channel id="2" type="UI" color="2" name="i.2" />
+				<channel id="3" type="UI" color="2" name="i.3" />
+				<channel id="4" type="UI" color="2" name="i.4" />
+				<channel id="5" type="UI" color="2" name="i.5" />
+				<channel id="6" type="UI" color="2" name="i.6" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+			<channels page="3" name ="UI 8-14">
+				<channel id="0" type="UI" color="2" name="i.7" />
+				<channel id="1" type="UI" color="2" name="i.8" />
+				<channel id="2" type="UI" color="5" name="i.9" />
+				<channel id="3" type="UI" color="5" name="i.10" />
+				<channel id="4" type="UI" color="5" name="i.11" />
+				<channel id="5" type="UI" color="2" name="l.0" />
+				<channel id="6" type="UI" color="2" name="l.1" />
+				<channel id="7" type="UI" color="3" name="m" />
+			</channels>
+		</snap>
+		
+	</snapshots>	
+	
+	<!-- La balise color du bouton remplace la couleur de la scene dans le fichier xml de dash pour déclencher automatiquement la fonction du bouton -->
+	<buttons>
+		<button id="1" bank ="OPTIONS" color = "#ff66ff01" scene = "Presentation 1" uiname ="Z_presentation" flash="false" />
+		<button id="2" bank ="OPTIONS" color = "#ff66ff02" scene = "Presentation 2" uiname ="Z_presentation" flash="false"  />
+		<button id="3" bank ="OPTIONS" color = "#ff66ff03" scene = "Presentation 3" uiname ="Z_presentation" flash="false" />
+		<button id="4" bank ="OPTIONS" scene = "Fumée 50%" uiname ="" flash="true" add="false" />
+		<button id="5" bank ="OPTIONS" scene = "Fumée 10%" uiname ="" flash="true" add="false"  />
+		<button id="6" bank ="PUPITRE" scene = "Pupitre orange" uiname ="" flash="true" add="false"  />
+		<button id="7" bank ="PUPITRE" scene = "Pupitre blanc" uiname ="" flash="true" add="false"  />
+		<button id="8" bank ="PUPITRE" scene = "Pupitre off" uiname ="" flash="true" add="false"  />
+	</buttons>
+
+</DAUIServer>
+
+

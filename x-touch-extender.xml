@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>	
+	<xtouch>
+		<channels>
+			<channel id="0">
+				<input id="CC80" type ="ER"/> <!-- encodeur rottation -->
+				<input id="Note0" type ="EP"/>	<!-- NCODER PRESS -->
+				<input id="Note8" type ="REC" /> <!-- bouton poussoir 1-->
+				<input id="Note16" type ="SOLO" /> <!-- bouton poussoir 2 -->
+				<input id="Note24" type ="MUTE" /> <!-- bouton poussoir 3-->
+				<input id="Note32" type ="SELECT" /> <!-- bouton poussoir 4-->
+				<input id="Note110" type ="FT" /> <!-- Fader touch -->
+				<input id="CC70" type ="FM" /> <!-- Fader move -->
+				<output id="CC80" type="EL" /><!-- encoder light 0..127  -->
+				<output id="Note8" type ="REC" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note16" type ="SOLO" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note24" type ="MUTE" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note32" type ="SELECT" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="CC70" type="MF" /><!-- move fader  -->
+				<output id="CC90" type="LM" /><!-- Level meter 0..127  -->
+			</channel>
+			<channel id="1">
+				<input id="CC81" type ="ER"/> <!-- encodeur rottation -->
+				<input id="Note1" type ="EP"/>	<!-- NCODER PRESS -->
+				<input id="Note9" type ="REC" /> <!-- bouton poussoir 1-->
+				<input id="Note17" type ="SOLO" /> <!-- bouton poussoir 2 -->
+				<input id="Note25" type ="MUTE" /> <!-- bouton poussoir 3-->
+				<input id="Note33" type ="SELECT" /> <!-- bouton poussoir 4-->
+				<input id="Note111" type ="FT" /> <!-- Fader touch -->
+				<input id="CC71" type ="FM" /> <!-- Fader move -->
+				<output id="CC81" type="EL" /><!-- encoder light 0..127  -->
+				<output id="Note9" type ="REC" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note17" type ="SOLO" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note25" type ="MUTE" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note33" type ="SELECT" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="CC71" type="MF" /><!-- move fader  -->
+				<output id="CC91" type="LM" /><!-- Level meter 0..127  -->
+			</channel>
+			<channel id="2">
+				<input id="CC82" type ="ER"/> <!-- encodeur rottation -->
+				<input id="Note2" type ="EP"/>	<!-- NCODER PRESS -->
+				<input id="Note10" type ="REC" /> <!-- bouton poussoir 1-->
+				<input id="Note18" type ="SOLO" /> <!-- bouton poussoir 2 -->
+				<input id="Note26" type ="MUTE" /> <!-- bouton poussoir 3-->
+				<input id="Note34" type ="SELECT" /> <!-- bouton poussoir 4-->
+				<input id="Note112" type ="FT" /> <!-- Fader touch -->
+				<input id="CC72" type ="FM" /> <!-- Fader move -->
+				<output id="CC82" type="EL" /><!-- encoder light 0..127  -->
+				<output id="Note10" type ="REC" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note18" type ="SOLO" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note26" type ="MUTE" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note34" type ="SELECT" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="CC92" type="LM" /><!-- Level meter 0..127  -->
+				<output id="CC72" type="MF" /><!-- move fader  -->
+			</channel>
+			<channel id="3">
+				<input id="CC83" type ="ER"/> <!-- encodeur rottation -->
+				<input id="Note3" type ="EP"/>	<!-- NCODER PRESS -->
+				<input id="Note11" type ="REC" /> <!-- bouton poussoir 1-->
+				<input id="Note19" type ="SOLO" /> <!-- bouton poussoir 2 -->
+				<input id="Note27" type ="MUTE" /> <!-- bouton poussoir 3-->
+				<input id="Note35" type ="SELECT" /> <!-- bouton poussoir 4-->
+				<input id="Note113" type ="FT" /> <!-- Fader touch -->
+				<input id="CC73" type ="FM" /> <!-- Fader move -->
+				<output id="CC83" type="EL" /><!-- encoder light 0..127  -->
+				<output id="Note11" type ="REC" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note19" type ="SOLO" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note27" type ="MUTE" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note35" type ="SELECT" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="CC93" type="LM" /><!-- Level meter 0..127  -->
+				<output id="CC73" type="MF" /><!-- move fader  -->
+			</channel>
+			<channel id="4">
+				<input id="CC84" type ="ER"/> <!-- encodeur rottation -->
+				<input id="Note4" type ="EP"/>	<!-- NCODER PRESS -->
+				<input id="Note12" type ="REC" /> <!-- bouton poussoir 1-->
+				<input id="Note20" type ="SOLO" /> <!-- bouton poussoir 2 -->
+				<input id="Note28" type ="MUTE" /> <!-- bouton poussoir 3-->
+				<input id="Note36" type ="SELECT" /> <!-- bouton poussoir 4-->
+				<input id="Note114" type ="FT" /> <!-- Fader touch -->
+				<input id="CC74" type ="FM" /> <!-- Fader move -->
+				<output id="CC84" type="EL" /><!-- encoder light 0..127  -->
+				<output id="Note12" type ="REC" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note20" type ="SOLO" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note28" type ="MUTE" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note36" type ="SELECT" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="CC94" type="LM" /><!-- Level meter 0..127  -->
+				<output id="CC74" type="MF" /><!-- move fader  -->
+			</channel>
+			<channel id="5">
+				<input id="CC85" type ="ER"/> <!-- encodeur rottation -->
+				<input id="Note5" type ="EP"/>	<!-- NCODER PRESS -->
+				<input id="Note13" type ="REC" /> <!-- bouton poussoir 1-->
+				<input id="Note21" type ="SOLO" /> <!-- bouton poussoir 2 -->
+				<input id="Note29" type ="MUTE" /> <!-- bouton poussoir 3-->
+				<input id="Note37" type ="SELECT" /> <!-- bouton poussoir 4-->
+				<input id="Note115" type ="FT" /> <!-- Fader touch -->
+				<input id="CC75" type ="FM" /> <!-- Fader move -->
+				<output id="CC85" type="EL" /><!-- encoder light 0..127  -->
+				<output id="Note13" type ="REC" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note21" type ="SOLO" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note29" type ="MUTE" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note37" type ="SELECT" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="CC95" type="LM" /><!-- Level meter 0..127  -->
+				<output id="CC75" type="MF" /><!-- move fader  -->
+			</channel>
+			<channel id="6">
+				<input id="CC86" type ="ER"/> <!-- encodeur rottation -->
+				<input id="Note6" type ="EP"/>	<!-- NCODER PRESS -->
+				<input id="Note14" type ="REC" /> <!-- bouton poussoir 1-->
+				<input id="Note22" type ="SOLO" /> <!-- bouton poussoir 2 -->
+				<input id="Note30" type ="MUTE" /> <!-- bouton poussoir 3-->
+				<input id="Note38" type ="SELECT" /> <!-- bouton poussoir 4-->
+				<input id="Note116" type ="FT" /> <!-- Fader touch -->
+				<input id="CC76" type ="FM" /> <!-- Fader move -->
+				<output id="CC86" type="EL" /><!-- encoder light 0..127  -->
+				<output id="Note14" type ="REC" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note22" type ="SOLO" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note30" type ="MUTE" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note38" type ="SELECT" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="CC96" type="LM" /><!-- Level meter 0..127  -->
+				<output id="CC76" type="MF" /><!-- move fader  -->
+			</channel>
+			<channel id="7">
+				<input id="CC87" type ="ER"/> <!-- encodeur rottation -->
+				<input id="Note7" type ="EP"/>	<!-- NCODER PRESS -->
+				<input id="Note15" type ="REC" /> <!-- bouton poussoir 1-->
+				<input id="Note23" type ="SOLO" /> <!-- bouton poussoir 2 -->
+				<input id="Note31" type ="MUTE" /> <!-- bouton poussoir 3-->
+				<input id="Note39" type ="SELECT" /> <!-- bouton poussoir 4-->
+				<input id="Note117" type ="FT" /> <!-- Fader touch -->
+				<input id="CC77" type ="FM" /> <!-- Fader move -->
+				<output id="CC87" type="EL" /><!-- encoder light 0..127  -->
+				<output id="Note15" type ="REC" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note23" type ="SOLO" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note31" type ="MUTE" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="Note39" type ="SELECT" /> <!-- 0..63 : OFF  64 Blinking 65..127 ON-->
+				<output id="CC97" type="LM" /><!-- Level meter 0..127  -->
+				<output id="CC77" type="MF" /><!-- move fader  -->
+			</channel>
+		</channels>
+	</xtouch>
